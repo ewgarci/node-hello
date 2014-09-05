@@ -1,6 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var os=require('os');
+var sys = require('sys');
+var exec = require('child_process').exec;
+
 
 var app = express();
 app.use(morgan('dev'));
@@ -18,7 +21,20 @@ for (k in interfaces) {
 
 app.get('/', function(req, res){
         var date = new Date();
-        res.send(date + ': Hello World from ' + addresses[0]);
+        res.send(date + ' ' + addresses[0] + ' Hello World');
+});
+
+app.get('/generateLoad/:seconds', function(req, res){
+        console.log(req.params.seconds);
+        if (req.params.seconds % 1 === 0){
+                var date = new Date();
+                function puts(error, stdout, stderr) {
+                        res.send(date + ' ' + addresses[0] + ' ' + stdout);
+                }
+                exec("stress --cpu 1 --timeout " + req.params.seconds + "s", puts);
+        }else{
+                res.send(400, "ERROR: enter an integer for seconds");
+        }
 });
 
 app.listen(process.env.PORT || 3000);
