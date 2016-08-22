@@ -3,11 +3,11 @@ pipeline:
     image: node
     commands:
       - sleep 10
-      - echo "Build test"
+      - echo "Build test 2"
 
 services:
   database:
     image: postgres:9.4.5
-      environment:
-        - POSTGRES_USER=postgres
-        - POSTGRES_DB=test
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=test
