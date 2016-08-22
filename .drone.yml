@@ -1,0 +1,3 @@
+image: node
+script:
+  -echo "Build is Complete!"
