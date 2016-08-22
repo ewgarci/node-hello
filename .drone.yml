@@ -2,7 +2,7 @@ pipeline:
   test:
     image: node
     commands:
-      - sleep 10 # gives the database enough time to initialize
+      - sleep 10
       - echo "Build test"
 
 services:
