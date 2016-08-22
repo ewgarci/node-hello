@@ -21,7 +21,7 @@ for (k in interfaces) {
 
 app.get('/', function(req, res){
         var date = new Date();
-        res.json(200, { "time": date, "serverInternalIp": addresses[0], "msg":"Hello World"});
+        res.json(200, { "time": date, "serverInternalIp": addresses[0], "msg":"Hello Drone!"});
 });
 
 app.get('/generateLoad/:seconds', function(req, res){
