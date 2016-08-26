@@ -52,6 +52,15 @@ goodbye:
 name:
   steps:
     -script:
-      name: echo name 
+      name: echo name
       code: |
         echo "Eddy"
+
+deploy:
+  steps:
+    - script:
+        name: echo some information
+        code: |
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
+
