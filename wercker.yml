@@ -37,24 +37,33 @@ build:
 
 hello:
   steps:
-    -script:
-      name: hello
-      code: |
-        echo "Hello"
+    - script:
+        name: echo hello
+        code: |
+          sleep 10
+          echo "Hello"
+          sleep 10
+          echo "Hello"
+          sleep 10
+          echo "Hello"
 
 goodbye:
   steps:
-    -script:
-      name: goodbye step
-      code: |
-        echo "goodbye"
+    - script:
+        name: echo goodbye
+        code: |
+          sleep 15
+          echo "goodbye"
+          sleep 15
+          echo "goodbye"
 
 name:
   steps:
-    -script:
-      name: echo name
-      code: |
-        echo "Eddy"
+    - script:
+        name: echo name
+        code: |
+          sleep 30
+          echo "Eddy"
 
 deploy:
   steps:
