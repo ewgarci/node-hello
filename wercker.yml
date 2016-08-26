@@ -35,23 +35,23 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
 
-test-1:
+hello:
   steps:
     -script:
-      name: echo name
+      name: hello
+      code: |
+        echo "Hello"
+
+goodbye:
+  steps:
+    -script:
+      name: goodbye step
+      code: |
+        echo "goodbye"
+
+name:
+  steps:
+    -script:
+      name: echo name 
       code: |
         echo "Eddy"
-
-test-2:
-  steps:
-    -script:
-      name: echo name 2
-      code: |
-        echo "Eddy 2"
-
-test-3:
-  steps:
-    -script:
-      name: echo name 3
-      code: |
-        echo "Eddy 3"
