@@ -39,19 +39,19 @@ test-1:
   steps:
     -script:
       name: echo name
-        code: |
-          echo "Eddy"
+      code: |
+        echo "Eddy"
 
 test-2:
   steps:
     -script:
       name: echo name 2
-        code: |
-          echo "Eddy 2"
+      code: |
+        echo "Eddy 2"
 
 test-3:
   steps:
     -script:
       name: echo name 3
-        code: |
-          echo "Eddy 3"
+      code: |
+        echo "Eddy 3"
