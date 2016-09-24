@@ -2,8 +2,8 @@ pipeline:
   test:
     image: node
     commands:
-      - sleep 10
-      - echo "Build test 2"
+      - sleep 5
+      - echo "Hello Drone CI"
 
 services:
   database:
